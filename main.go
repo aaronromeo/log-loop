@@ -24,12 +24,15 @@ func main() {
 	router.Static("/static", "static")
 
 	router.GET("/", func(c *gin.Context) {
+		fmt.Println("index.tmpl.html", time.Now())
 		c.HTML(http.StatusOK, "index.tmpl.html", nil)
 	})
 
 	go func() {
-		fmt.Println(time.Now())
-		time.Sleep(time.Second * 60)
+		for {
+			fmt.Println("Current Timestamp:", time.Now())
+			time.Sleep(time.Second * 60)
+		}
 	}()
 
 	router.Run(":" + port)
