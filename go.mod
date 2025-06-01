@@ -1,10 +1,10 @@
 module github.com/heroku/go-getting-started
 
 // +heroku goVersion go1.20
-go 1.20
+go 1.21
 
 require (
-	github.com/gin-gonic/gin v1.10.0
+	github.com/gin-gonic/gin v1.10.1
 	github.com/heroku/x v0.4.3
 )
 
